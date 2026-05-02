@@ -61,7 +61,6 @@ export function PuzzlePiece({
 
   const handleTouchMove = (e: React.TouchEvent) => {
     if (touchDragIndex < 0) return;
-    e.preventDefault(); // Prevent page scrolling while dragging
     const touch = e.touches[0];
     setTouchOffset({ x: touch.clientX, y: touch.clientY });
   };
