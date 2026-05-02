@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <rect width="400" height="400" fill="#FFE0B2"/>
+  <!-- 鬃毛 -->
+  <circle cx="200" cy="140" r="80" fill="#8D6E63"/>
+  <!-- 头 -->
+  <circle cx="200" cy="160" r="55" fill="#FFB74D"/>
+  <!-- 鬃毛覆盖 -->
+  <path d="M140,100 Q150,140 140,180" stroke="#8D6E63" fill="#8D6E63" stroke-width="8"/>
+  <path d="M160,90 Q170,130 160,170" stroke="#8D6E63" fill="#8D6E63" stroke-width="8"/>
+  <path d="M180,85 Q190,120 180,165" stroke="#8D6E63" fill="#8D6E63" stroke-width="8"/>
+  <path d="M200,80 Q210,115 200,160" stroke="#8D6E63" fill="#8D6E63" stroke-width="8"/>
+  <path d="M220,85 Q230,120 220,165" stroke="#8D6E63" fill="#8D6E63" stroke-width="8"/>
+  <path d="M240,90 Q250,130 240,170" stroke="#8D6E63" fill="#8D6E63" stroke-width="8"/>
+  <path d="M260,100 Q270,140 260,180" stroke="#8D6E63" fill="#8D6E63" stroke-width="8"/>
+  <!-- 眼睛 -->
+  <circle cx="175" cy="150" r="10" fill="#333"/>
+  <circle cx="225" cy="150" r="10" fill="#333"/>
+  <circle cx="175" cy="147" r="4" fill="white"/>
+  <circle cx="225" cy="147" r="4" fill="white"/>
+  <!-- 鼻子 -->
+  <ellipse cx="200" cy="170" rx="12" ry="8" fill="#8D6E63"/>
+  <!-- 嘴巴 -->
+  <path d="M185,180 Q200,195 215,180" stroke="#8D6E63" fill="none" stroke-width="3"/>
+  <!-- 腮红 -->
+  <circle cx="160" cy="165" r="10" fill="#FFB6C1" opacity="0.5"/>
+  <circle cx="240" cy="165" r="10" fill="#FFB6C1" opacity="0.5"/>
+  <!-- 小耳朵 -->
+  <circle cx="135" cy="145" r="18" fill="#FFB74D"/>
+  <circle cx="135" cy="145" r="12" fill="#8D6E63"/>
+  <circle cx="265" cy="145" r="18" fill="#FFB74D"/>
+  <circle cx="265" cy="145" r="12" fill="#8D6E63"/>
+</svg>

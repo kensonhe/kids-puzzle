@@ -57,16 +57,19 @@ export function StartScreen({ onStartGame }: StartScreenProps) {
       <h1 className="start-screen__title">🧩 儿童拼图</h1>
 
       <div className="start-screen__images">
-        {PRESET_IMAGES.map(img => (
-          <div
-            key={img.id}
-            className={`image-card ${selectedImage === img.url ? 'image-card--selected' : ''}`}
-            onClick={() => handleImageSelect(img.url)}
-          >
-            <img src={img.url} alt={img.name} />
-            <span>{img.name}</span>
-          </div>
-        ))}
+        <div className="image-carousel">
+          {PRESET_IMAGES.map(img => (
+            <div
+              key={img.id}
+              className={`image-card ${selectedImage === img.url ? 'image-card--selected' : ''}`}
+              onClick={() => handleImageSelect(img.url)}
+            >
+              <img src={img.url} alt={img.name} />
+              <span>{img.name}</span>
+            </div>
+          ))}
+        </div>
+        <div className="carousel-hint">← 左右滑动选择更多 →</div>
       </div>
 
       <button className="upload-btn" onClick={() => fileInputRef.current?.click()}>

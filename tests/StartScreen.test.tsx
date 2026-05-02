@@ -5,7 +5,7 @@ import { StartScreen } from '../src/components/StartScreen';
 describe('StartScreen', () => {
   it('should render preset image options', () => {
     render(<StartScreen onStartGame={() => {}} />);
-    expect(document.querySelectorAll('.image-card')).toHaveLength(4);
+    expect(document.querySelectorAll('.image-card')).toHaveLength(12);
   });
 
   it('should render difficulty options', () => {

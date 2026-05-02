@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <rect width="400" height="400" fill="#C8E6C9"/>
+  <!-- 荷叶 -->
+  <ellipse cx="200" cy="320" rx="120" ry="40" fill="#4CAF50"/>
+  <ellipse cx="200" cy="315" rx="100" ry="35" fill="#66BB6A"/>
+  <!-- 荷叶纹 -->
+  <line x1="200" y1="280" x2="200" y2="350" stroke="#43A047" stroke-width="2"/>
+  <line x1="140" y1="310" x2="260" y2="310" stroke="#43A047" stroke-width="2"/>
+  <!-- 青蛙身体 -->
+  <ellipse cx="200" cy="260" rx="60" ry="40" fill="#4CAF50"/>
+  <!-- 头 -->
+  <ellipse cx="200" cy="200" rx="55" ry="35" fill="#4CAF50"/>
+  <!-- 大眼睛 -->
+  <circle cx="170" cy="175" r="22" fill="white"/>
+  <circle cx="230" cy="175" r="22" fill="white"/>
+  <circle cx="170" cy="175" r="10" fill="#333"/>
+  <circle cx="230" cy="175" r="10" fill="#333"/>
+  <circle cx="168" cy="172" r="4" fill="white"/>
+  <circle cx="228" cy="172" r="4" fill="white"/>
+  <!-- 嘴巴 -->
+  <path d="M170,210 Q200,230 230,210" stroke="#2E7D32" fill="#2E7D32" stroke-width="3"/>
+  <path d="M180,215 Q200,225 220,215" stroke="white" fill="none" stroke-width="1"/>
+  <!-- 腮红 -->
+  <circle cx="155" cy="195" r="8" fill="#FFB6C1" opacity="0.5"/>
+  <circle cx="245" cy="195" r="8" fill="#FFB6C1" opacity="0.5"/>
+  <!-- 前脚 -->
+  <ellipse cx="160" cy="290" rx="15" ry="10" fill="#4CAF50"/>
+  <ellipse cx="240" cy="290" rx="15" ry="10" fill="#4CAF50"/>
+  <!-- 小花 -->
+  <circle cx="330" cy="300" r="10" fill="#FF69B4"/>
+  <circle cx="330" cy="290" r="7" fill="#FF69B4"/>
+  <circle cx="340" cy="300" r="7" fill="#FF69B4"/>
+  <circle cx="320" cy="300" r="7" fill="#FF69B4"/>
+  <circle cx="330" cy="300" r="5" fill="#FFD700"/>
+</svg>

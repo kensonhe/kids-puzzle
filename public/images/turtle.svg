@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <rect width="400" height="400" fill="#A5D6A7"/>
+  <!-- 壳 -->
+  <ellipse cx="200" cy="240" rx="80" ry="65" fill="#8D6E63"/>
+  <ellipse cx="200" cy="235" rx="70" ry="55" fill="#A1887F"/>
+  <!-- 壳纹 -->
+  <path d="M200,180 L200,290" stroke="#6D4C41" stroke-width="3"/>
+  <path d="M130,235 L270,235" stroke="#6D4C41" stroke-width="3"/>
+  <path d="M140,200 Q200,180 260,200" stroke="#6D4C41" fill="none" stroke-width="2"/>
+  <path d="M140,270 Q200,290 260,270" stroke="#6D4C41" fill="none" stroke-width="2"/>
+  <!-- 壳中心 -->
+  <circle cx="200" cy="235" r="15" fill="#6D4C41"/>
+  <!-- 头 -->
+  <ellipse cx="130" cy="220" rx="35" ry="25" fill="#81C784"/>
+  <!-- 眼睛 -->
+  <circle cx="120" cy="210" r="10" fill="white"/>
+  <circle cx="120" cy="210" r="5" fill="#333"/>
+  <circle cx="118" cy="208" r="2" fill="white"/>
+  <!-- 嘴巴 -->
+  <path d="M110,225 Q120,232 130,225" stroke="#2E7D32" fill="none" stroke-width="2"/>
+  <!-- 腮红 -->
+  <circle cx="105" cy="218" r="6" fill="#FFB6C1" opacity="0.5"/>
+  <!-- 脚 -->
+  <ellipse cx="140" cy="305" rx="12" ry="8" fill="#81C784"/>
+  <ellipse cx="260" cy="305" rx="12" ry="8" fill="#81C784"/>
+  <ellipse cx="170" cy="310" rx="10" ry="6" fill="#81C784"/>
+  <ellipse cx="230" cy="310" rx="10" ry="6" fill="#81C784"/>
+  <!-- 尾巴 -->
+  <path d="M280,245 Q300,260 310,250 Q320,240 315,230" stroke="#81C784" fill="none" stroke-width="5" stroke-linecap="round"/>
+</svg>

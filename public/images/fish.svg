@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <rect width="400" height="400" fill="#4FC3F7"/>
+  <!-- 水 -->
+  <ellipse cx="200" cy="350" rx="180" ry="40" fill="#29B6F6" opacity="0.5"/>
+  <!-- 鱼身 -->
+  <ellipse cx="180" cy="200" rx="70" ry="50" fill="#FF9800"/>
+  <!-- 鱼尾 -->
+  <polygon points="250,200 300,160 300,240" fill="#FF9800"/>
+  <!-- 鱼鳍 -->
+  <ellipse cx="160" cy="170" rx="25" ry="15" fill="#FFB74D" transform="rotate(-20 160 170)"/>
+  <ellipse cx="180" cy="230" rx="20" ry="10" fill="#FFB74D"/>
+  <!-- 鱼鳞 -->
+  <path d="M160,190 Q170,180 180,190" stroke="#F57C00" fill="none" stroke-width="2"/>
+  <path d="M170,200 Q180,190 190,200" stroke="#F57C00" fill="none" stroke-width="2"/>
+  <path d="M180,210 Q190,200 200,210" stroke="#F57C00" fill="none" stroke-width="2"/>
+  <!-- 眼睛 -->
+  <circle cx="140" cy="190" r="15" fill="white"/>
+  <circle cx="140" cy="190" r="8" fill="#333"/>
+  <circle cx="138" cy="187" r="3" fill="white"/>
+  <!-- 嘴巴 -->
+  <path d="M110,200 Q120,210 130,200" stroke="#F57C00" fill="none" stroke-width="3"/>
+  <!-- 水泡 -->
+  <circle cx="100" cy="160" r="8" fill="white" opacity="0.6"/>
+  <circle cx="80" cy="130" r="5" fill="white" opacity="0.4"/>
+  <circle cx="70" cy="100" r="4" fill="white" opacity="0.3"/>
+</svg>

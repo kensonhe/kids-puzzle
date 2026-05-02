@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <rect width="400" height="400" fill="#B3E5FC"/>
+  <!-- 冰 -->
+  <ellipse cx="200" cy="380" rx="180" ry="30" fill="#E1F5FE" opacity="0.7"/>
+  <!-- 身体 -->
+  <ellipse cx="200" cy="260" rx="80" ry="100" fill="#333"/>
+  <!-- 白色肚子 -->
+  <ellipse cx="200" cy="260" rx="50" ry="80" fill="white"/>
+  <!-- 头 -->
+  <circle cx="200" cy="170" r="60" fill="#333"/>
+  <!-- 白色脸部 -->
+  <circle cx="200" cy="180" r="40" fill="white"/>
+  <!-- 眼睛 -->
+  <circle cx="175" cy="160" r="12" fill="#333"/>
+  <circle cx="225" cy="160" r="12" fill="#333"/>
+  <circle cx="175" cy="155" r="5" fill="white"/>
+  <circle cx="225" cy="155" r="5" fill="white"/>
+  <!-- 嘴/喙 -->
+  <polygon points="200,185 190,195 210,195" fill="#FF9800"/>
+  <!-- 腮红 -->
+  <circle cx="155" cy="180" r="10" fill="#FFB6C1" opacity="0.5"/>
+  <circle cx="245" cy="180" r="10" fill="#FFB6C1" opacity="0.5"/>
+  <!-- 脚 -->
+  <ellipse cx="170" cy="360" rx="25" ry="12" fill="#FF9800"/>
+  <ellipse cx="230" cy="360" rx="25" ry="12" fill="#FF9800"/>
+  <!-- 翅膀 -->
+  <ellipse cx="120" cy="240" rx="20" ry="40" fill="#444"/>
+  <ellipse cx="280" cy="240" rx="20" ry="40" fill="#444"/>
+</svg>

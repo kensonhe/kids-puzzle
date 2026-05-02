@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <rect width="400" height="400" fill="#B3E5FC"/>
+  <!-- 花朵 -->
+  <circle cx="320" cy="80" r="20" fill="#FF69B4" opacity="0.3"/>
+  <circle cx="350" cy="60" r="12" fill="#FF69B4" opacity="0.2"/>
+  <!-- 蜜蜂身体 -->
+  <ellipse cx="200" cy="210" rx="50" ry="35" fill="#FFC107"/>
+  <!-- 黑色条纹 -->
+  <rect x="175" y="195" width="15" height="30" rx="3" fill="#333"/>
+  <rect x="195" y="195" width="15" height="30" rx="3" fill="#333"/>
+  <rect x="215" y="195" width="15" height="30" rx="3" fill="#333"/>
+  <!-- 头 -->
+  <circle cx="200" cy="170" r="25" fill="#FFC107"/>
+  <!-- 眼睛 -->
+  <circle cx="190" cy="165" r="6" fill="#333"/>
+  <circle cx="210" cy="165" r="6" fill="#333"/>
+  <circle cx="188" cy="163" r="2" fill="white"/>
+  <circle cx="208" cy="163" r="2" fill="white"/>
+  <!-- 嘴巴 -->
+  <path d="M190,178 Q200,186 210,178" stroke="#333" fill="none" stroke-width="2"/>
+  <!-- 翅膀 -->
+  <ellipse cx="170" cy="190" rx="35" ry="20" fill="white" opacity="0.6"/>
+  <ellipse cx="230" cy="190" rx="35" ry="20" fill="white" opacity="0.6"/>
+  <!-- 触角 -->
+  <line x1="190" y1="148" x2="170" y2="120" stroke="#333" stroke-width="3"/>
+  <line x1="210" y1="148" x2="230" y2="120" stroke="#333" stroke-width="3"/>
+  <circle cx="170" cy="120" r="5" fill="#FFC107"/>
+  <circle cx="230" cy="120" r="5" fill="#FFC107"/>
+  <!-- 腿 -->
+  <line x1="180" y1="240" x2="170" y2="270" stroke="#333" stroke-width="3"/>
+  <line x1="200" y1="240" x2="200" y2="270" stroke="#333" stroke-width="3"/>
+  <line x1="220" y1="240" x2="230" y2="270" stroke="#333" stroke-width="3"/>
+</svg>

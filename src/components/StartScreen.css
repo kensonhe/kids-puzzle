@@ -15,10 +15,22 @@
 }
 
 .start-screen__images {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
   width: 100%;
+}
+
+/* 横向滑动轮播 */
+.image-carousel {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding: 8px 4px;
+  scrollbar-width: none; /* Firefox 隐藏滚动条 */
+}
+
+.image-carousel::-webkit-scrollbar {
+  display: none; /* Chrome/Safari 隐藏滚动条 */
 }
 
 .image-card {
@@ -31,6 +43,11 @@
   padding: 10px;
   cursor: pointer;
   transition: border-color 0.2s;
+  scroll-snap-align: start;
+  /* 每行显示4个，固定宽度 */
+  width: calc(25% - 8px);
+  min-width: 100px;
+  flex-shrink: 0;
 }
 
 .image-card img {
@@ -53,6 +70,13 @@
 .image-card--upload {
   border-color: #2196f3;
   background: #e3f2fd;
+}
+
+.carousel-hint {
+  text-align: center;
+  font-size: 12px;
+  color: #999;
+  margin-top: 4px;
 }
 
 .upload-btn {
@@ -124,10 +148,8 @@
   .start-screen__title {
     font-size: 28px;
   }
-  .start-screen__images {
-    gap: 8px;
-  }
   .image-card {
+    min-width: 90px;
     padding: 8px;
     border-width: 2px;
   }
