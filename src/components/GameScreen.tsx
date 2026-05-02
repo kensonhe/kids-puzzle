@@ -7,8 +7,6 @@ interface GameScreenProps {
   image: string;
   difficulty: DifficultyLevel;
   pieces: PuzzlePieceType[];
-  startTime: number;
-  isComplete: boolean;
   onSwap: (fromIndex: number, toIndex: number) => void;
   onReset: () => void;
 }
@@ -19,8 +17,6 @@ export function GameScreen({
   image,
   difficulty,
   pieces,
-  startTime,
-  isComplete,
   onSwap,
   onReset,
 }: GameScreenProps) {
@@ -75,7 +71,6 @@ export function GameScreen({
                     piece={piece}
                     image={image}
                     gridSize={difficulty}
-                    puzzleSize={PUZZLE_SIZE}
                     onSwap={handleSwap}
                     selected={selectedIndex === piece.currentIndex}
                     selectedIndex={selectedIndex}

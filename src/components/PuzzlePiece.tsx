@@ -6,7 +6,6 @@ interface PuzzlePieceProps {
   piece: PuzzlePieceType;
   image: string;
   gridSize: number;
-  puzzleSize: number;
   onSwap: (fromIndex: number, toIndex: number) => void;
   selected: boolean;
   selectedIndex: number;
@@ -20,7 +19,6 @@ export function PuzzlePiece({
   piece,
   image,
   gridSize,
-  puzzleSize,
   onSwap,
   selected,
   selectedIndex,
@@ -38,7 +36,6 @@ export function PuzzlePiece({
 
   // Touch-based drag state
   const [touchDragIndex, setTouchDragIndex] = useState<number>(-1);
-  const [touchOffset, setTouchOffset] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
 
   const handleClick = () => {
     if (piece.isPlaced) return;
@@ -51,18 +48,14 @@ export function PuzzlePiece({
   };
 
   // Touch drag handlers for mobile
-  const handleTouchStart = (e: React.TouchEvent) => {
+  const handleTouchStart = () => {
     if (piece.isPlaced) return;
-    const touch = e.touches[0];
     setTouchDragIndex(piece.currentIndex);
     setIsDragging(true);
-    setTouchOffset({ x: touch.clientX, y: touch.clientY });
   };
 
-  const handleTouchMove = (e: React.TouchEvent) => {
+  const handleTouchMove = () => {
     if (touchDragIndex < 0) return;
-    const touch = e.touches[0];
-    setTouchOffset({ x: touch.clientX, y: touch.clientY });
   };
 
   const handleTouchEnd = (e: React.TouchEvent) => {
