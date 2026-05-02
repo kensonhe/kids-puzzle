@@ -1,0 +1,62 @@
+.complete-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 30px 20px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.complete-screen__celebration {
+  font-size: 48px;
+}
+
+.complete-screen__encouragement {
+  font-size: 24px;
+  color: #ff9800;
+  font-weight: bold;
+}
+
+.complete-screen__image {
+  border: 3px solid #4caf50;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.complete-screen__image img {
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+  display: block;
+}
+
+.complete-screen__time {
+  font-size: 16px;
+  color: #666;
+}
+
+.complete-screen__actions {
+  display: flex;
+  gap: 12px;
+}
+
+.play-again-btn {
+  background: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 24px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.choose-image-btn {
+  background: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 24px;
+  font-size: 18px;
+  cursor: pointer;
+}
