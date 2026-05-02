@@ -1,0 +1,49 @@
+.puzzle-piece {
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+  background-repeat: no-repeat;
+  user-select: none;
+}
+
+.puzzle-piece:hover:not(.puzzle-piece--placed) {
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.puzzle-piece--placed {
+  border-color: #4caf50;
+  cursor: default;
+  opacity: 0.85;
+}
+
+.puzzle-piece--dragging {
+  transform: scale(1.1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  opacity: 0.7;
+}
+
+.puzzle-piece--selected {
+  border-color: #ff9800;
+  border-width: 3px;
+  box-shadow: 0 0 8px rgba(255, 152, 0, 0.5);
+}
+
+.puzzle-piece__check {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  color: #4caf50;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
