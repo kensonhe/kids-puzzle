@@ -63,8 +63,7 @@ export function GameScreen({
           className="puzzle-grid"
           style={{
             gridTemplateColumns: `repeat(${difficulty}, 1fr)`,
-            width: PUZZLE_SIZE,
-            height: PUZZLE_SIZE,
+            width: `min(${PUZZLE_SIZE}px, calc(100vw - 32px))`,
           }}
         >
           {Array.from({ length: totalCells }, (_, position) => {

@@ -1,17 +1,20 @@
 .game-screen {
   display: flex;
-  gap: 20px;
-  padding: 20px;
-  align-items: flex-start;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+  align-items: center;
   max-width: 700px;
   margin: 0 auto;
 }
 
 .game-sidebar {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
   gap: 12px;
-  width: 150px;
+  width: 100%;
+  justify-content: center;
 }
 
 .reference-image {
@@ -21,8 +24,9 @@
 }
 
 .reference-image img {
-  width: 100%;
-  height: auto;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
   display: block;
 }
 
@@ -31,15 +35,15 @@
   color: white;
   border: none;
   border-radius: 8px;
-  padding: 10px 16px;
+  padding: 8px 16px;
   font-size: 14px;
   cursor: pointer;
 }
 
 .game-main {
-  flex: 1;
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 
 .puzzle-grid {
@@ -54,4 +58,19 @@
   width: 100%;
   aspect-ratio: 1;
   overflow: hidden;
+}
+
+@media (max-width: 480px) {
+  .game-screen {
+    padding: 12px 8px;
+    gap: 12px;
+  }
+  .reference-image img {
+    width: 60px;
+    height: 60px;
+  }
+  .game-reset-btn {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
 }

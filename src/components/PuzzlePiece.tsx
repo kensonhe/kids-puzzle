@@ -27,8 +27,10 @@ export function PuzzlePiece({
   const dragStartIndex = useRef<number>(-1);
 
   const pieceSize = puzzleSize / gridSize;
-  const bgSize = `${puzzleSize}px ${puzzleSize}px`;
-  const bgPosition = `-${piece.imageClip.x}px -${piece.imageClip.y}px`;
+  const bgSizePercent = `${gridSize * 100}% ${gridSize * 100}%`;
+  const col = piece.correctIndex % gridSize;
+  const row = Math.floor(piece.correctIndex / gridSize);
+  const bgPositionPercent = `${(col / (gridSize - 1)) * 100}% ${(row / (gridSize - 1)) * 100}%`;
 
   const handleClick = () => {
     if (piece.isPlaced) return;
@@ -80,11 +82,9 @@ export function PuzzlePiece({
     <div
       className={classNames}
       style={{
-        width: pieceSize,
-        height: pieceSize,
         backgroundImage: `url(${image})`,
-        backgroundSize: bgSize,
-        backgroundPosition: bgPosition,
+        backgroundSize: bgSizePercent,
+        backgroundPosition: bgPositionPercent,
       }}
       onClick={handleClick}
       draggable={!piece.isPlaced}
