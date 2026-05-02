@@ -80,6 +80,13 @@ export function StartScreen({ onStartGame }: StartScreenProps) {
         onChange={handleFileUpload}
       />
 
+      {selectedImage && selectedImage.startsWith('data:') && (
+        <div className="image-card image-card--selected image-card--upload">
+          <img src={selectedImage} alt="上传图片" />
+          <span>我的图片</span>
+        </div>
+      )}
+
       {uploadError && <p className="start-screen__error">{uploadError}</p>}
 
       <div className="start-screen__difficulty">
