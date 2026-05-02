@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <!-- Sky blue background -->
+  <rect width="400" height="400" fill="#87CEEB" rx="20"/>
+
+  <!-- Dog face -->
+  <circle cx="200" cy="210" r="120" fill="#F4A460" stroke="#CD853F" stroke-width="3"/>
+
+  <!-- Left floppy ear -->
+  <ellipse cx="110" cy="170" rx="50" ry="70" fill="#CD853F" stroke="#A0522D" stroke-width="2" transform="rotate(-20 110 170)"/>
+
+  <!-- Right floppy ear -->
+  <ellipse cx="290" cy="170" rx="50" ry="70" fill="#CD853F" stroke="#A0522D" stroke-width="2" transform="rotate(20 290 170)"/>
+
+  <!-- Lighter inner ear left -->
+  <ellipse cx="110" cy="175" rx="30" ry="45" fill="#F4A460" transform="rotate(-20 110 175)"/>
+
+  <!-- Lighter inner ear right -->
+  <ellipse cx="290" cy="175" rx="30" ry="45" fill="#F4A460" transform="rotate(20 290 175)"/>
+
+  <!-- Left eye -->
+  <ellipse cx="165" cy="190" rx="28" ry="32" fill="#FFFFFF" stroke="#333" stroke-width="2"/>
+  <circle cx="165" cy="195" r="12" fill="#1A1A1A"/>
+  <circle cx="159" cy="190" r="4" fill="#FFFFFF"/>
+
+  <!-- Right eye -->
+  <ellipse cx="235" cy="190" rx="28" ry="32" fill="#FFFFFF" stroke="#333" stroke-width="2"/>
+  <circle cx="235" cy="195" r="12" fill="#1A1A1A"/>
+  <circle cx="229" cy="190" r="4" fill="#FFFFFF"/>
+
+  <!-- Nose -->
+  <ellipse cx="200" cy="230" rx="18" ry="14" fill="#333" stroke="#1A1A1A" stroke-width="1"/>
+
+  <!-- Mouth -->
+  <path d="M 185,242 Q 200,260 215,242" fill="none" stroke="#333" stroke-width="2"/>
+  <line x1="200" y1="244" x2="200" y2="255" stroke="#333" stroke-width="2"/>
+
+  <!-- Tongue -->
+  <ellipse cx="200" cy="260" rx="12" ry="8" fill="#FF6B6B"/>
+
+  <!-- Collar -->
+  <path d="M 120,310 Q 200,340 280,310" fill="#FF4444" stroke="#CC0000" stroke-width="2"/>
+
+  <!-- Bell -->
+  <circle cx="200" cy="335" r="12" fill="#FFD700" stroke="#DAA520" stroke-width="2"/>
+  <circle cx="200" cy="340" r="3" fill="#333"/>
+  <line x1="200" y1="340" x2="200" y2="350" stroke="#333" stroke-width="1.5"/>
+
+  <!-- Blush -->
+  <circle cx="145" cy="240" r="10" fill="#FF9999" opacity="0.4"/>
+  <circle cx="255" cy="240" r="10" fill="#FF9999" opacity="0.4"/>
+</svg>

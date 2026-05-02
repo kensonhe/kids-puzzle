@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <!-- Khaki background -->
+  <rect width="400" height="400" fill="#F0E68C" rx="20"/>
+
+  <!-- Stem -->
+  <path d="M 200,280 Q 195,320 200,390" fill="none" stroke="#228B22" stroke-width="8"/>
+
+  <!-- Left leaf -->
+  <path d="M 200,330 Q 160,300 140,310 Q 150,330 200,340" fill="#228B22" stroke="#006400" stroke-width="2"/>
+
+  <!-- Right leaf -->
+  <path d="M 200,330 Q 240,300 260,310 Q 250,330 200,340" fill="#228B22" stroke="#006400" stroke-width="2"/>
+
+  <!-- Petals (8 golden petals around center) -->
+  <ellipse cx="200" cy="140" rx="30" ry="55" fill="#FFD700" stroke="#DAA520" stroke-width="1.5" transform="rotate(0 200 200)"/>
+  <ellipse cx="200" cy="140" rx="30" ry="55" fill="#FFD700" stroke="#DAA520" stroke-width="1.5" transform="rotate(45 200 200)"/>
+  <ellipse cx="200" cy="140" rx="30" ry="55" fill="#FFD700" stroke="#DAA520" stroke-width="1.5" transform="rotate(90 200 200)"/>
+  <ellipse cx="200" cy="140" rx="30" ry="55" fill="#FFD700" stroke="#DAA520" stroke-width="1.5" transform="rotate(135 200 200)"/>
+  <ellipse cx="200" cy="140" rx="30" ry="55" fill="#FFD700" stroke="#DAA520" stroke-width="1.5" transform="rotate(180 200 200)"/>
+  <ellipse cx="200" cy="140" rx="30" ry="55" fill="#FFD700" stroke="#DAA520" stroke-width="1.5" transform="rotate(225 200 200)"/>
+  <ellipse cx="200" cy="140" rx="30" ry="55" fill="#FFD700" stroke="#DAA520" stroke-width="1.5" transform="rotate(270 200 200)"/>
+  <ellipse cx="200" cy="140" rx="30" ry="55" fill="#FFD700" stroke="#DAA520" stroke-width="1.5" transform="rotate(315 200 200)"/>
+
+  <!-- Inner petals (smaller, slightly darker) -->
+  <ellipse cx="200" cy="160" rx="18" ry="35" fill="#FFC107" stroke="#DAA520" stroke-width="1" transform="rotate(22.5 200 200)"/>
+  <ellipse cx="200" cy="160" rx="18" ry="35" fill="#FFC107" stroke="#DAA520" stroke-width="1" transform="rotate(67.5 200 200)"/>
+  <ellipse cx="200" cy="160" rx="18" ry="35" fill="#FFC107" stroke="#DAA520" stroke-width="1" transform="rotate(112.5 200 200)"/>
+  <ellipse cx="200" cy="160" rx="18" ry="35" fill="#FFC107" stroke="#DAA520" stroke-width="1" transform="rotate(157.5 200 200)"/>
+  <ellipse cx="200" cy="160" rx="18" ry="35" fill="#FFC107" stroke="#DAA520" stroke-width="1" transform="rotate(202.5 200 200)"/>
+  <ellipse cx="200" cy="160" rx="18" ry="35" fill="#FFC107" stroke="#DAA520" stroke-width="1" transform="rotate(247.5 200 200)"/>
+  <ellipse cx="200" cy="160" rx="18" ry="35" fill="#FFC107" stroke="#DAA520" stroke-width="1" transform="rotate(292.5 200 200)"/>
+  <ellipse cx="200" cy="160" rx="18" ry="35" fill="#FFC107" stroke="#DAA520" stroke-width="1" transform="rotate(337.5 200 200)"/>
+
+  <!-- Center -->
+  <circle cx="200" cy="200" r="35" fill="#8B4513" stroke="#654321" stroke-width="2"/>
+
+  <!-- Center pattern - seeds -->
+  <circle cx="185" cy="190" r="3" fill="#654321"/>
+  <circle cx="200" cy="185" r="3" fill="#654321"/>
+  <circle cx="215" cy="190" r="3" fill="#654321"/>
+  <circle cx="190" cy="200" r="3" fill="#654321"/>
+  <circle cx="210" cy="200" r="3" fill="#654321"/>
+  <circle cx="185" cy="210" r="3" fill="#654321"/>
+  <circle cx="200" cy="215" r="3" fill="#654321"/>
+  <circle cx="215" cy="210" r="3" fill="#654321"/>
+  <circle cx="200" cy="200" r="4" fill="#5C4033"/>
+</svg>
