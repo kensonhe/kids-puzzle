@@ -1,0 +1,57 @@
+.game-screen {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  align-items: flex-start;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.game-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 150px;
+}
+
+.reference-image {
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.reference-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.game-reset-btn {
+  background: #f44336;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.game-main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.puzzle-grid {
+  display: grid;
+  gap: 2px;
+  border: 3px solid #333;
+  border-radius: 8px;
+  background: #333;
+}
+
+.puzzle-cell {
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+}
