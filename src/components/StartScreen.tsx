@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react';
 import { PRESET_IMAGES, DIFFICULTY_OPTIONS } from '../constants';
-import { DifficultyLevel } from '../types';
+import type { DifficultyLevel } from '../types';
 import { compressImage } from '../utils/imageCompress';
 import './StartScreen.css';
 

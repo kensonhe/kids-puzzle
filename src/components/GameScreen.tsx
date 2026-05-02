@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { PuzzlePiece as PuzzlePieceType, DifficultyLevel } from '../types';
+import type { PuzzlePiece as PuzzlePieceType, DifficultyLevel } from '../types';
 import { PuzzlePiece as PuzzlePieceComponent } from './PuzzlePiece';
 import './GameScreen.css';
 

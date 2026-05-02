@@ -1,4 +1,4 @@
-import { DifficultyLevel } from './types';
+import type { DifficultyLevel } from './types';
 
 export interface PresetImage {
   id: string;

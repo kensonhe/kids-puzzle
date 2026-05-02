@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react';
-import { PuzzlePiece as PuzzlePieceType } from '../types';
+import type { PuzzlePiece as PuzzlePieceType } from '../types';
 import './PuzzlePiece.css';
 
 interface PuzzlePieceProps {

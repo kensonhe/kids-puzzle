@@ -1,5 +1,5 @@
 import { useState, useCallback } from 'react';
-import { GameState, PuzzlePiece, DifficultyLevel } from '../types';
+import type { GameState, PuzzlePiece, DifficultyLevel } from '../types';
 import { shuffle } from '../utils/shuffle';
 import { calculateClips } from '../utils/imageClip';
 
