@@ -54,7 +54,7 @@ export function StartScreen({ onStartGame }: StartScreenProps) {
 
   return (
     <div className="start-screen">
-      <h1 className="start-screen__title">🧩 小天儿童拼图</h1>
+      <h1 className="start-screen__title">🧩 儿童拼图</h1>
 
       <div className="start-screen__images">
         {PRESET_IMAGES.map(img => (
