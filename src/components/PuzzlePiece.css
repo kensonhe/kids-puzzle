@@ -8,7 +8,7 @@
   position: relative;
   background-repeat: no-repeat;
   user-select: none;
-  touch-action: manipulation; /* Allow tap clicks, prevent double-tap zoom */
+  touch-action: none; /* Block browser touch defaults so our JS handles all touch interaction */
 }
 
 .puzzle-piece:hover:not(.puzzle-piece--placed) {
