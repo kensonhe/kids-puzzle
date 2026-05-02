@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 import type { PuzzlePiece as PuzzlePieceType } from '../types';
 import './PuzzlePiece.css';
 
@@ -13,6 +13,9 @@ interface PuzzlePieceProps {
   onSelect: (index: number) => void;
 }
 
+// Detect touch device - HTML5 Drag & Drop doesn't work on touch
+const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
 export function PuzzlePiece({
   piece,
   image,
@@ -24,13 +27,18 @@ export function PuzzlePiece({
   onSelect,
 }: PuzzlePieceProps) {
   const [isDragging, setIsDragging] = useState(false);
-  const dragStartIndex = useRef<number>(-1);
 
-  const pieceSize = puzzleSize / gridSize;
   const bgSizePercent = `${gridSize * 100}% ${gridSize * 100}%`;
   const col = piece.correctIndex % gridSize;
   const row = Math.floor(piece.correctIndex / gridSize);
-  const bgPositionPercent = `${(col / (gridSize - 1)) * 100}% ${(row / (gridSize - 1)) * 100}%`;
+  // For gridSize=1, avoid division by zero (shouldn't happen in practice)
+  const bgPositionX = gridSize > 1 ? (col / (gridSize - 1)) * 100 : 0;
+  const bgPositionY = gridSize > 1 ? (row / (gridSize - 1)) * 100 : 0;
+  const bgPositionPercent = `${bgPositionX}% ${bgPositionY}%`;
+
+  // Touch-based drag state
+  const [touchDragIndex, setTouchDragIndex] = useState<number>(-1);
+  const [touchOffset, setTouchOffset] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
 
   const handleClick = () => {
     if (piece.isPlaced) return;
@@ -42,20 +50,62 @@ export function PuzzlePiece({
     }
   };
 
+  // Touch drag handlers for mobile
+  const handleTouchStart = (e: React.TouchEvent) => {
+    if (piece.isPlaced) return;
+    const touch = e.touches[0];
+    setTouchDragIndex(piece.currentIndex);
+    setIsDragging(true);
+    setTouchOffset({ x: touch.clientX, y: touch.clientY });
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (touchDragIndex < 0) return;
+    e.preventDefault(); // Prevent page scrolling while dragging
+    const touch = e.touches[0];
+    setTouchOffset({ x: touch.clientX, y: touch.clientY });
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (touchDragIndex < 0 || piece.isPlaced) {
+      setIsDragging(false);
+      setTouchDragIndex(-1);
+      return;
+    }
+
+    // Find which cell the finger landed on
+    const touch = e.changedTouches[0];
+    const target = document.elementFromPoint(touch.clientX, touch.clientY);
+    const cell = target?.closest('.puzzle-cell');
+    if (cell) {
+      // Determine the cell index by its position in the grid
+      const grid = cell.parentElement;
+      if (grid) {
+        const cells = Array.from(grid.children);
+        const cellIndex = cells.indexOf(cell);
+        if (cellIndex >= 0 && cellIndex !== piece.currentIndex) {
+          onSwap(piece.currentIndex, cellIndex);
+        }
+      }
+    }
+
+    setIsDragging(false);
+    setTouchDragIndex(-1);
+  };
+
+  // Desktop drag handlers
   const handleDragStart = (e: React.DragEvent) => {
     if (piece.isPlaced) {
       e.preventDefault();
       return;
     }
     setIsDragging(true);
-    dragStartIndex.current = piece.currentIndex;
     e.dataTransfer.setData('text/plain', String(piece.currentIndex));
     e.dataTransfer.effectAllowed = 'move';
   };
 
   const handleDragEnd = () => {
     setIsDragging(false);
-    dragStartIndex.current = -1;
   };
 
   const handleDragOver = (e: React.DragEvent) => {
@@ -78,6 +128,22 @@ export function PuzzlePiece({
     selected ? 'puzzle-piece--selected' : '',
   ].filter(Boolean).join(' ');
 
+  // On touch devices, don't use HTML5 drag (it blocks clicks)
+  // On desktop, use both drag and click-to-swap
+  const dragProps = isTouchDevice
+    ? {
+        onTouchStart: handleTouchStart,
+        onTouchMove: handleTouchMove,
+        onTouchEnd: handleTouchEnd,
+      }
+    : {
+        draggable: !piece.isPlaced,
+        onDragStart: handleDragStart,
+        onDragEnd: handleDragEnd,
+        onDragOver: handleDragOver,
+        onDrop: handleDrop,
+      };
+
   return (
     <div
       className={classNames}
@@ -87,11 +153,7 @@ export function PuzzlePiece({
         backgroundPosition: bgPositionPercent,
       }}
       onClick={handleClick}
-      draggable={!piece.isPlaced}
-      onDragStart={handleDragStart}
-      onDragEnd={handleDragEnd}
-      onDragOver={handleDragOver}
-      onDrop={handleDrop}
+      {...dragProps}
     >
       {piece.isPlaced && <span className="puzzle-piece__check">&#10003;</span>}
     </div>
