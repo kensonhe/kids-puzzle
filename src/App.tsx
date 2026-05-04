@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/react';
 import { useGameState } from './hooks/useGameState';
 import { StartScreen } from './components/StartScreen';
@@ -12,6 +13,7 @@ function App() {
     return (
       <>
         <StartScreen onStartGame={startGame} />
+        <Analytics />
         <SpeedInsights />
       </>
     );
@@ -27,6 +29,7 @@ function App() {
           onSwap={swapPieces}
           onReset={resetGame}
         />
+        <Analytics />
         <SpeedInsights />
       </>
     );
@@ -41,6 +44,7 @@ function App() {
           onPlayAgain={() => startGame(image, difficulty)}
           onChooseImage={resetGame}
         />
+        <Analytics />
         <SpeedInsights />
       </>
     );
