@@ -8,18 +8,11 @@ import './App.css';
 function App() {
   const { phase, image, difficulty, pieces, startTime, startGame, swapPieces, resetGame } = useGameState();
 
-  if (phase === 'start') {
-    return (
-      <>
-        <StartScreen onStartGame={startGame} />
-        <SpeedInsights />
-      </>
-    );
-  }
-
-  if (phase === 'playing') {
-    return (
-      <>
+  return (
+    <>
+      {phase === 'start' && <StartScreen onStartGame={startGame} />}
+      
+      {phase === 'playing' && (
         <GameScreen
           image={image}
           difficulty={difficulty}
@@ -27,26 +20,20 @@ function App() {
           onSwap={swapPieces}
           onReset={resetGame}
         />
-        <SpeedInsights />
-      </>
-    );
-  }
-
-  if (phase === 'complete') {
-    return (
-      <>
+      )}
+      
+      {phase === 'complete' && (
         <CompleteScreen
           image={image}
           startTime={startTime}
           onPlayAgain={() => startGame(image, difficulty)}
           onChooseImage={resetGame}
         />
-        <SpeedInsights />
-      </>
-    );
-  }
-
-  return null;
+      )}
+      
+      <SpeedInsights />
+    </>
+  );
 }
 
 export default App;
