@@ -4,6 +4,10 @@
 
 在线体验：https://puzzle.aigame.art
 
+## 视频演示
+
+[观看开发过程视频](docs/puzzle-blog.mp4)
+
 ## 截图预览
 
 | 开始页 | 游戏页 |
