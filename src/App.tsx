@@ -1,3 +1,4 @@
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import { useGameState } from './hooks/useGameState';
 import { StartScreen } from './components/StartScreen';
 import { GameScreen } from './components/GameScreen';
@@ -8,29 +9,40 @@ function App() {
   const { phase, image, difficulty, pieces, startTime, startGame, swapPieces, resetGame } = useGameState();
 
   if (phase === 'start') {
-    return <StartScreen onStartGame={startGame} />;
+    return (
+      <>
+        <StartScreen onStartGame={startGame} />
+        <SpeedInsights />
+      </>
+    );
   }
 
   if (phase === 'playing') {
     return (
-      <GameScreen
-        image={image}
-        difficulty={difficulty}
-        pieces={pieces}
-        onSwap={swapPieces}
-        onReset={resetGame}
-      />
+      <>
+        <GameScreen
+          image={image}
+          difficulty={difficulty}
+          pieces={pieces}
+          onSwap={swapPieces}
+          onReset={resetGame}
+        />
+        <SpeedInsights />
+      </>
     );
   }
 
   if (phase === 'complete') {
     return (
-      <CompleteScreen
-        image={image}
-        startTime={startTime}
-        onPlayAgain={() => startGame(image, difficulty)}
-        onChooseImage={resetGame}
-      />
+      <>
+        <CompleteScreen
+          image={image}
+          startTime={startTime}
+          onPlayAgain={() => startGame(image, difficulty)}
+          onChooseImage={resetGame}
+        />
+        <SpeedInsights />
+      </>
     );
   }
 

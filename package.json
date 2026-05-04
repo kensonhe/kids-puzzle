@@ -12,6 +12,7 @@
     "test:watch": "vitest"
   },
   "dependencies": {
+    "@vercel/speed-insights": "^2.0.0",
     "canvas": "^3.2.3",
     "react": "^19.2.5",
     "react-dom": "^19.2.5"
