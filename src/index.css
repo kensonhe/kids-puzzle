@@ -3,14 +3,38 @@
   padding: 0;
   box-sizing: border-box;
 }
+:root {
+  --bg-1: #f5f7ff;
+  --bg-2: #eefaf5;
+  --text-main: #1d2840;
+  --text-soft: #55607a;
+  --brand: #5a67ff;
+  --brand-strong: #3f4de8;
+  --accent: #ff8f3d;
+  --success: #1ea97c;
+  --danger: #ef4d71;
+  --card-bg: rgba(255, 255, 255, 0.9);
+  --card-border: rgba(255, 255, 255, 0.75);
+  --shadow-lg: 0 22px 45px rgba(50, 74, 144, 0.14);
+  --shadow-md: 0 12px 26px rgba(42, 63, 121, 0.12);
+  --radius-xl: 24px;
+  --radius-lg: 16px;
+}
 
 body {
-  font-family: 'Segoe UI', 'Arial Rounded MT Bold', sans-serif;
+  font-family: 'Avenir Next', 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: var(--text-main);
+  background:
+    radial-gradient(1200px 600px at -10% -10%, #dbe7ff 0%, transparent 55%),
+    radial-gradient(800px 500px at 110% 10%, #d8f7e8 0%, transparent 60%),
+    linear-gradient(160deg, var(--bg-1) 0%, var(--bg-2) 100%);
+  min-height: 100vh;
 }
 
 #root {
   width: 100%;
   min-height: 100vh;
+  padding: 22px 14px 28px;
 }

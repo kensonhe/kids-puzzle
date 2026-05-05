@@ -2,28 +2,47 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
-  padding: 30px 16px;
-  max-width: 500px;
+  gap: 14px;
+  padding: 30px 20px;
+  max-width: 680px;
   margin: 0 auto;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  backdrop-filter: blur(6px);
+}
+
+.complete-screen__badge {
+  border-radius: 999px;
+  background: linear-gradient(135deg, rgba(90, 103, 255, 0.14), rgba(84, 188, 255, 0.17));
+  color: #3a4bc6;
+  border: 1px solid rgba(90, 103, 255, 0.25);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 7px 14px;
 }
 
 .complete-screen__celebration {
-  font-size: 48px;
+  font-size: 52px;
 }
 
 .complete-screen__encouragement {
-  font-size: 24px;
-  color: #ff9800;
-  font-weight: bold;
+  font-size: 30px;
+  color: var(--text-main);
+  font-weight: 800;
+  text-align: center;
 }
 
 .complete-screen__image {
-  border: 3px solid #4caf50;
-  border-radius: 12px;
+  border: 3px solid rgba(30, 169, 124, 0.7);
+  border-radius: 16px;
   overflow: hidden;
-  max-width: 300px;
+  max-width: 340px;
   width: 100%;
+  box-shadow: 0 14px 26px rgba(30, 169, 124, 0.24);
 }
 
 .complete-screen__image img {
@@ -35,53 +54,82 @@
 
 .complete-screen__time {
   font-size: 16px;
-  color: #666;
+  color: var(--text-soft);
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(125, 142, 196, 0.22);
+  border-radius: 10px;
+  padding: 8px 12px;
 }
 
 .complete-screen__actions {
   display: flex;
-  gap: 12px;
+  gap: 10px;
   flex-wrap: wrap;
   justify-content: center;
+  width: 100%;
+  max-width: 420px;
 }
 
 .play-again-btn {
-  background: #4caf50;
+  background: linear-gradient(135deg, #2ac79b 0%, #1ea97c 100%);
   color: white;
   border: none;
   border-radius: 12px;
   padding: 12px 24px;
-  font-size: 18px;
+  font-size: 17px;
+  font-weight: 700;
   cursor: pointer;
+  flex: 1;
+  min-width: 160px;
+  box-shadow: 0 10px 18px rgba(30, 169, 124, 0.24);
+  transition: transform 0.18s ease, filter 0.18s ease;
 }
 
+
 .choose-image-btn {
-  background: #2196f3;
+  background: linear-gradient(135deg, #4d86ff 0%, #5b64ff 100%);
   color: white;
   border: none;
   border-radius: 12px;
   padding: 12px 24px;
-  font-size: 18px;
+  font-size: 17px;
+  font-weight: 700;
   cursor: pointer;
+  flex: 1;
+  min-width: 160px;
+  box-shadow: 0 10px 18px rgba(77, 120, 255, 0.24);
+  transition: transform 0.18s ease, filter 0.18s ease;
+}
+
+.play-again-btn:hover,
+.choose-image-btn:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.05);
 }
 
 @media (max-width: 480px) {
   .complete-screen {
     padding: 20px 12px;
     gap: 12px;
+    border-radius: 18px;
+  }
+
+  .complete-screen__badge {
+    font-size: 12px;
   }
   .complete-screen__celebration {
-    font-size: 36px;
+    font-size: 42px;
   }
   .complete-screen__encouragement {
-    font-size: 20px;
+    font-size: 24px;
   }
   .complete-screen__image {
-    max-width: 200px;
+    max-width: 240px;
   }
   .play-again-btn,
   .choose-image-btn {
-    padding: 10px 20px;
+    padding: 10px 18px;
     font-size: 16px;
   }
 }

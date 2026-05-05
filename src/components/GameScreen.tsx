@@ -45,10 +45,15 @@ export function GameScreen({
 
   return (
     <div className="game-screen">
+      <div className="game-header">
+        <h1 className="game-header__title">拼图进行中</h1>
+        <p className="game-header__desc">当前难度：{difficulty} × {difficulty}</p>
+      </div>
       <div className="game-sidebar">
         <div className="reference-image">
           <img src={image} alt="参考图" />
         </div>
+        <div className="game-help">提示：先点一块再点另一块，可快速交换位置</div>
         <button className="game-reset-btn" onClick={onReset}>
           ↻ 重新开始
         </button>

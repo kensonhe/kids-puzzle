@@ -28,6 +28,7 @@ export function CompleteScreen({
 
   return (
     <div className="complete-screen">
+      <div className="complete-screen__badge">🎯 拼图完成</div>
       <div className="complete-screen__celebration">🎉🎉🎉</div>
       <div className="complete-screen__encouragement">{encouragement}</div>
       <div className="complete-screen__image">

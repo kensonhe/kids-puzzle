@@ -54,9 +54,13 @@ export function StartScreen({ onStartGame }: StartScreenProps) {
 
   return (
     <div className="start-screen">
-      <h1 className="start-screen__title">🧩 儿童拼图</h1>
+      <div className="start-screen__header">
+        <h1 className="start-screen__title">🧩 儿童拼图</h1>
+        <p className="start-screen__subtitle">选一张你喜欢的图片，马上开始拼图冒险</p>
+      </div>
 
       <div className="start-screen__images">
+        <h2 className="section-title">1. 选择图片</h2>
         <div className="image-carousel">
           {PRESET_IMAGES.map(img => (
             <div
@@ -93,6 +97,7 @@ export function StartScreen({ onStartGame }: StartScreenProps) {
       {uploadError && <p className="start-screen__error">{uploadError}</p>}
 
       <div className="start-screen__difficulty">
+        <h2 className="section-title">2. 选择难度</h2>
         {DIFFICULTY_OPTIONS.map(opt => (
           <button
             key={opt.level}
@@ -109,7 +114,7 @@ export function StartScreen({ onStartGame }: StartScreenProps) {
         disabled={!selectedImage}
         onClick={handleStartGame}
       >
-        开始拼图!
+        🚀 开始拼图
       </button>
     </div>
   );
